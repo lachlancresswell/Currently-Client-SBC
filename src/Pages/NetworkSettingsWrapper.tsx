@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PageConfigNetwork } from './PageConfigNetwork';
 import { Modal } from '../Components/ConfigModal';
-import { ConfigVariable, IPOptions, MDNSConfig } from '../../../Types';
+import { ConfigVariable, IPOptions, MDNSConfig } from '../../Types';
 import { useConfigContext } from '../Hooks/useConfig';
 
 const IP_PLUGIN_NAME = 'IPPlugin';
@@ -38,7 +38,7 @@ const NetworkSettingsWrapper = () => {
       ipPluginState[1]((prevState: any) => {
         return {
           ...prevState,
-          ... {
+          ...{
             [setting.key]: setting.setting
           }
         }
@@ -47,7 +47,7 @@ const NetworkSettingsWrapper = () => {
       mdnsPluginState[1]((prevState: any) => {
         return {
           ...prevState,
-          ... {
+          ...{
             [setting.key]: setting.setting
           }
         }

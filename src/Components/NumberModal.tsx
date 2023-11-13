@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import '../Styles/ConfigModal.css'
-import { ConfigVariable } from '../../../Types';
+import { ConfigVariable } from '../../Types';
 import { ArrowUp, ArrowDown } from "./CommonUI";
 
 export const NumberModal = ({ setting, onClose, onSubmit, updated }: { setting: ConfigVariable, onClose: () => void, onSubmit: (setting: ConfigVariable) => void, updated?: boolean }) => {

@@ -1,7 +1,7 @@
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
 import { useEffect, useState } from 'react';
-import { PhaseData, DistroData } from '../../../Types';
+import { PhaseData, DistroData } from '../../Types';
 import { Warning } from '../Components/Warnings';
 import '../Styles/PageBasic.css'
 

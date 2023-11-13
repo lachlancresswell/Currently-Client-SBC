@@ -1,6 +1,6 @@
 // src/components/ConfigForm.tsx
 import { useState } from 'react';
-import { WarningsOptions } from '../../../Types';
+import { WarningsOptions } from '../../Types';
 import { useConfigContext } from '../Hooks/useConfig';
 import '../Styles/PageConfigWarnings.css';
 

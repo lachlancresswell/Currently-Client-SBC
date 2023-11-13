@@ -4,7 +4,7 @@ import SpokeIcon from '@mui/icons-material/Spoke';
 import RouterIcon from '@mui/icons-material/Router';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import React from 'react';
-import { ConfigArray, IPOptions, MDNSConfig, ipaddress, prefix } from '../../../Types';
+import { ConfigArray, IPOptions, MDNSConfig, ipaddress, prefix } from '../../Types';
 import { Setting } from './NetworkSettingsWrapper';
 
 const PLUGIN_NAME = 'IPPlugin';

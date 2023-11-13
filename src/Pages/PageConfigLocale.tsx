@@ -1,4 +1,4 @@
-import { LocaleOptions } from "../../../Types";
+import { LocaleOptions } from "../../Types";
 import { useConfigContext } from '../Hooks/useConfig';
 import '../Styles/PageConfigLocale.css';
 import { MouseEventHandler, useState } from "react";

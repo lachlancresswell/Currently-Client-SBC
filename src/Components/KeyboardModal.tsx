@@ -1,6 +1,6 @@
 import { useState } from "react"
 import RefreshIcon from '@mui/icons-material/Refresh';
-import { ConfigVariable } from "../../../Types";
+import { ConfigVariable } from "../../Types";
 import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from "./CommonUI";
 
 const MAX_INDEX = 16;

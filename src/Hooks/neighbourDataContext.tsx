@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { DistroData, Neighbour, PhaseData } from '../../../Types';
+import { DistroData, Neighbour, PhaseData } from '../../Types';
 import { ClientOptions, InfluxDB, QueryApi } from '@influxdata/influxdb-client-browser'
 
 interface FluxQuery {

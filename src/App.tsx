@@ -33,7 +33,7 @@ import NetworkSettingsWrapper from './Pages/NetworkSettingsWrapper';
 import { ChartSettings } from './Pages/PageConfigChart';
 import { usePhaseColors } from './Hooks/usePhaseColors';
 import { SystemSettings } from './Pages/PageConfigSystem';
-import { LocaleOptions } from '../../Types';
+import { LocaleOptions } from '../Types';
 import { ConfigContextProvider, useConfigContext } from './Hooks/useConfig';
 
 const NeighbourSelector = () => {

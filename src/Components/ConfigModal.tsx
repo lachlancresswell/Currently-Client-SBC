@@ -1,7 +1,7 @@
 import '../Styles/ConfigModal.css'
 import { NumberModal } from './NumberModal';
 import { IPv4Modal } from './IPv4Modal';
-import { ConfigVariable } from '../../../Types';
+import { ConfigVariable } from '../../Types';
 import { KeyboardModal } from './KeyboardModal';
 import { Setting } from '../Pages/NetworkSettingsWrapper';
 

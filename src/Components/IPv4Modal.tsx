@@ -1,6 +1,6 @@
 import { useState } from "react"
 import RefreshIcon from '@mui/icons-material/Refresh';
-import { ConfigVariable, ipaddress } from "../../../Types";
+import { ConfigVariable, ipaddress } from "../../Types";
 import { ArrowUp, ArrowDown } from "./CommonUI";
 
 export const IPv4Modal = ({

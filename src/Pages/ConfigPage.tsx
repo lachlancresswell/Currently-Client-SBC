@@ -1,7 +1,5 @@
 // src/components/ConfigPage.tsx
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { PluginJSON } from '../../../Types';
 import { Link } from 'react-router-dom';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import LocationOnIcon from '@mui/icons-material/LocationOn';

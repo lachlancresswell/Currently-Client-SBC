@@ -1,5 +1,5 @@
 // src/components/ConfigForm.tsx
-import { SystemOptions } from '../../../Types';
+import { SystemOptions } from '../../Types';
 import { useConfigContext } from '../Hooks/useConfig';
 import '../Styles/PageConfigVersions.css';
 

@@ -1,6 +1,6 @@
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
-import { DistroData, IPOptions } from '../../../Types';
+import { DistroData, IPOptions } from '../../Types';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';

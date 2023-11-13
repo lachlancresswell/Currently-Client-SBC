@@ -1,4 +1,4 @@
-import { IPOptions } from '../../../Types';
+import { IPOptions } from '../../Types';
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
 import { useConfigContext } from '../Hooks/useConfig';

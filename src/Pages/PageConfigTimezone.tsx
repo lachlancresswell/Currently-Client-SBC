@@ -1,6 +1,6 @@
 // src/components/ConfigForm.tsx
 import { useState } from 'react';
-import { TZOptions } from '../../../Types';
+import { TZOptions } from '../../Types';
 import { useConfigContext } from '../Hooks/useConfig';
 import '../Styles/PageConfigTimezone.css';
 

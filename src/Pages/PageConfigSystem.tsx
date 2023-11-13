@@ -1,5 +1,5 @@
 import '../Styles/PageConfigSystem.css';
-import { SystemOptions } from '../../../Types';
+import { SystemOptions } from '../../Types';
 import { useConfigContext } from '../Hooks/useConfig';
 import { useState } from 'react';
 

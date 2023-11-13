@@ -1,6 +1,6 @@
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
-import { Phase, DistroData } from '../../../Types';
+import { Phase, DistroData } from '../../Types';
 import { useParams } from 'react-router-dom';
 import { Warning } from '../Components/Warnings';
 import '../Styles/PageChannel.css'

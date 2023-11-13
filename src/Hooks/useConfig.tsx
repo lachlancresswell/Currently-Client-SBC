@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext, useContext } from 'react';
-import { ConfigArray, PluginJSON } from '../../../Types';
+import { ConfigArray, PluginJSON } from '../../Types';
 import axios from 'axios';
 import ClientConfig from '../plugin-config.client.dev.json';
 import ResetConfig from '../plugin-config.client.reset.dev.json';

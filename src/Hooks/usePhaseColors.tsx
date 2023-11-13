@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { LocaleOptions } from '../../../Types';
+import { LocaleOptions } from '../../Types';
 
 export function usePhaseColors(pluginConfig: LocaleOptions) {
     useEffect(() => {
