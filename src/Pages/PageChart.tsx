@@ -285,11 +285,10 @@ const MyComponent: React.FC<Props> = () => {
     return (
         <>
             <div style={{
-                position: 'absolute',
-                top: '11vh',
-                height: '79vh',
+                height: '78%',
                 width: '100%',
-                zIndex: -1, // This is to prevent the chart from being clickable
+                marginTop: '-2%',
+                zIndex: -1, // prevent the chart from being clickable
             }}>
                 <ReactApexChart type="line" options={plotOptions} series={configureData(plotData, plotViewStartDate, plotViewEndDate)} height={"100%"} />
             </div>

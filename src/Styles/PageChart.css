@@ -1,15 +1,10 @@
 .chart-buttons {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 0.3em;
     font-size: 1.6em;
     color: black;
     font-weight: bold;
-    height: 12%;
-
-    position: absolute;
-    top: 86vh;
-    left: 0vh;
+    height: 10%;
     width: 133vh;
 }
 
