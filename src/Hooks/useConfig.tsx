@@ -95,10 +95,11 @@ export const ConfigContextProvider: React.FC<props> = ({ children }) => {
      */
     const resetConfigData = ResetConfig as any as PluginJSON;
 
+    const localData = localStorage.getItem(LOCAL_STORAGE_KEY);
     /**
      * Last cached configuration in local storage.
      */
-    const localConfigData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '{}') as PluginJSON
+    const localConfigData = JSON.parse((!localData || localData === 'undefined') ? '{}' : localData) as PluginJSON
 
 
     /**
