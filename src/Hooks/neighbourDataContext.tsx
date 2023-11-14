@@ -71,7 +71,8 @@ interface props {
 }
 
 export const token = `EoENRkYCQuPJaPKtwM2D9sqle14ocDcPufGuncmfhEa4uK8PogPuC87dk8zJ9sPm6yzncZj2xToYxZ2dj37yAg==`
-export const org = `onestage`;
+export const org = `myorg`;
+export const bucket = `mybucket`;
 
 /**
  * React component that provides the neighbour data context object.
@@ -90,7 +91,7 @@ export const NeighbourDataProvider: React.FC<props> = ({ neighbour, children }) 
         const influxClient = new InfluxDB(hostConfig);
         const queryApi = influxClient.getQueryApi(org);
 
-        const data = await pollInflux(queryApi, 'mybucket')
+        const data = await pollInflux(queryApi, bucket)
         setNeighbourData(data!);
         return data
     };
