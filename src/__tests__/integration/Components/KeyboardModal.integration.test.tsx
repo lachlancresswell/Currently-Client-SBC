@@ -1,4 +1,4 @@
-import { setLetterRelative, KeyboardModal, MAX_INDEX, replaceCharsAndTrim } from '../../../Components/KeyboardModal';
+import { KeyboardModal, MAX_INDEX } from '../../../Components/KeyboardModal';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 const mockOnSubmit = jest.fn();
@@ -17,9 +17,8 @@ const testScreen = () => {
     return { buttonOk, arrowUp, arrowDown, arrowLeft, arrowRight, buttonRefresh };
 }
 
-beforeEach(() => {
-    mockOnSubmit.mockClear();
-    mockOnClose.mockClear();
+afterEach(() => {
+    jest.clearAllMocks();
 });
 
 describe('Arrows, scrolling and submitting', () => {
