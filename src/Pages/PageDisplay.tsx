@@ -5,7 +5,7 @@ import '../Styles/PageDisplay.css'
 import { ChangeEvent, useState } from 'react';
 import { useTheme } from '../Hooks/useTheme';
 
-export const PageDisplay = ({ }: {}) => {
+export const PageDisplay = () => {
     const [sliderValue, setSliderValue] = useState(50);
     const { theme, switchTheme } = useTheme();
     const isChecked = theme === 'light';
