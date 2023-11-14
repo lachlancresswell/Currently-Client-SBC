@@ -27,7 +27,6 @@ export const KeyboardModal = ({
 }) => {
     const deviceNameAsArray = setting.value?.replaceAll(' ', String.fromCharCode(160)).padEnd(16, String.fromCharCode(160)).split('') || [''.padEnd(16, ' ')]
     const [deviceName, setDeviceName] = useState<string[]>(deviceNameAsArray)
-    const [relativeValue, setRelativeValue] = useState<1 | 10 | 50>(1)
     const [index, setIndex] = useState<number>(0);
 
     const setLetterRelative = (index: number, value: number) => {
@@ -55,8 +54,8 @@ export const KeyboardModal = ({
     return (
         <div className='gridModal'>
             <StringInput str={deviceName} index={index} />
-            <ArrowUp onClick={() => setLetterRelative(index, relativeValue)} />
-            <ArrowDown onClick={() => setLetterRelative(index, -relativeValue)} />
+            <ArrowUp onClick={() => setLetterRelative(index, 1)} />
+            <ArrowDown onClick={() => setLetterRelative(index, -1)} />
             <ArrowLeft onClick={() => setIndex(index > 0 ? index - 1 : index)} />
             <ArrowRight onClick={() => setIndex(index < MAX_INDEX - 1 ? index + 1 : index)} />
             <button className='span-one-modal modal-button-method modal-button-x' onClick={() => onClose()}>X</button>
@@ -76,7 +75,7 @@ const StringInput = ({ str, index }: { str: string[], index: number }) => {
     return (
         <div className='span-ten-modal'>
             {str.map((letter, letterIndex) => {
-                if (letterIndex == index) {
+                if (letterIndex === index) {
                     return <span className={'modal-selected'}>{letter}</span>
                 } else {
                     return <span>{letter}</span>

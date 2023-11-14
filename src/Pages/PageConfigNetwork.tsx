@@ -26,7 +26,7 @@ export const PageConfigNetwork = ({
     const { ipPluginState, mdnsPluginState } = configObj;
 
     const [ipPluginConfig, setIpPluginConfig] = ipPluginState!;
-    const [mdnsPluginConfig, setMdnsPluginConfig] = mdnsPluginState!;
+    const [mdnsPluginConfig] = mdnsPluginState!;
 
     const isChecked = ipPluginConfig?.dhcp.value;
     const modified = isModified(PLUGIN_NAME, ipPluginConfig) || isModified('MDNSPlugin', mdnsPluginConfig);
@@ -158,7 +158,7 @@ const guessGatewayFromIpAndPrefix = (ip: string | undefined, prefix: prefix | un
     const networkBinary = ipBinary.substr(0, prefix).padEnd(32, '0');
 
     // Calculate broadcast address by setting all host bits to 1
-    const _broadcastBinary = ipBinary.substr(0, prefix).padEnd(32, '1');
+    // const _broadcastBinary = ipBinary.substr(0, prefix).padEnd(32, '1');
 
     // Calculate default gateway address by incrementing network address by 1
     const gatewayBinary = networkBinary.substr(0, networkBinary.length - 1) + '1';

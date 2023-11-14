@@ -51,7 +51,7 @@ export const NeighbourProvider: React.FC<props> = ({ children }) => {
     }, 1000); // fetch every 5 seconds
 
     return () => clearInterval(interval);
-  }, [neighbours]);
+  }, [neighbours, selectedNeighbour]);
 
   const value = {
     neighbours,

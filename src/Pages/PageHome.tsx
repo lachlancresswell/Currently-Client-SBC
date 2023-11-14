@@ -1,4 +1,3 @@
-import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
 import { DistroData, IPOptions } from '../../Types';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
@@ -8,12 +7,9 @@ import PublicIcon from '@mui/icons-material/Public';
 import { Warning } from '../Components/Warnings';
 import { useConfigContext } from '../Hooks/useConfig';
 
-interface PageAdvProps {
-}
-
 const PLUGIN_NAME = 'IPPlugin'
 
-export const PageHome = ({ }: PageAdvProps) => {
+export const PageHome = () => {
     const { neighbourData } = useNeighbourDataContext();
     const { getPluginConfig } = useConfigContext();
     const configData = getPluginConfig<IPOptions>(PLUGIN_NAME);

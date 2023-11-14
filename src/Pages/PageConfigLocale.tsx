@@ -6,7 +6,7 @@ import { MouseEventHandler, useState } from "react";
 const PLUGIN_NAME = 'LocalePlugin';
 
 export const LocaleSettings = () => {
-    const { getPluginConfig, isModified, handleInputChange } = useConfigContext();
+    const { getPluginConfig, handleInputChange } = useConfigContext();
 
     const [pluginConfig, setPluginConfig] = useState<LocaleOptions | undefined>(getPluginConfig<LocaleOptions>(PLUGIN_NAME));
     const [startPluginConfig, setStartPluginConfig] = useState<LocaleOptions | undefined>(getPluginConfig<LocaleOptions>(PLUGIN_NAME));

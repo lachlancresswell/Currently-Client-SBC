@@ -1,13 +1,9 @@
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
-import { useEffect, useState } from 'react';
-import { PhaseData, DistroData } from '../../Types';
+import { DistroData } from '../../Types';
 import '../Styles/PageAdv.css'
 
-interface PageAdvProps {
-}
-
-export const PageAdv = ({ }: PageAdvProps) => {
+export const PageAdv = () => {
     const { selectedNeighbour } = useNeighbourContext();
     const { neighbourData } = useNeighbourDataContext();
 

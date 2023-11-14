@@ -1,28 +1,12 @@
 import { useNeighbourContext } from '../Hooks/neighbourContext';
 import { useNeighbourDataContext } from '../Hooks/neighbourDataContext';
-import { useEffect, useState } from 'react';
-import { PhaseData, DistroData } from '../../Types';
+import { DistroData } from '../../Types';
 import { Warning } from '../Components/Warnings';
 import '../Styles/PageBasic.css'
 
-interface PageBasicProps {
-}
-
-export const PageBasic = ({ }: PageBasicProps) => {
+export const PageBasic = () => {
     const { selectedNeighbour } = useNeighbourContext();
     const { neighbourData } = useNeighbourDataContext();
-    const [selectedPhase, setSelectedPhase] = useState<PhaseData | null>(null);
-
-    useEffect(() => {
-        if (neighbourData) {
-            const PHASE = 1;
-            setSelectedPhase({
-                voltage: neighbourData.phases[PHASE].voltage!,
-                amperage: neighbourData.phases[PHASE].amperage,
-                phase: PHASE,
-            });
-        }
-    }, [neighbourData]);
 
     if (!selectedNeighbour) {
         return null;

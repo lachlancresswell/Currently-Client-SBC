@@ -118,7 +118,7 @@ const initialOptions = (endDate: number) => {
             style: {
                 fontSize: '1em',
             },
-            formatter: (value: any) => (value >= 200) ? value.toFixed(value % 1 != 0 ? 1 : 0) + 'V' : undefined
+            formatter: (value: any) => (value >= 200) ? value.toFixed(value % 1 !== 0 ? 1 : 0) + 'V' : undefined
         },
     }
 
@@ -130,7 +130,7 @@ const initialOptions = (endDate: number) => {
             style: {
                 fontSize: '1em',
             },
-            formatter: (value: any) => (value <= 10) ? value.toFixed(value % 1 != 0 ? 1 : 0) + 'A' : undefined
+            formatter: (value: any) => (value <= 10) ? value.toFixed(value % 1 !== 0 ? 1 : 0) + 'A' : undefined
         },
         min: 0,
         max: 20,
@@ -228,8 +228,8 @@ const MyComponent: React.FC<Props> = () => {
     /**
      * Data to display on the plot
      */
+    const dataEndDate = new Date();
     const [plotData, setPlotData] = useState<Phase[]>(history);
-    const [dataEndDate, _setDataEndDate] = useState<Date>(new Date());
     const [plotViewStartDate, setPlotViewStartDate] = useState<Date>(new Date(dataEndDate.getTime() - (WINDOW_SIZE * 1000)));
     const [plotViewEndDate, setPlotViewEndDate] = useState<Date>(new Date(dataEndDate.getTime()));
     const [legendViewStatus, setLegendViewStatus] = useState<{ [index: string]: boolean }[]>(legendStartState);
@@ -242,7 +242,7 @@ const MyComponent: React.FC<Props> = () => {
 
     useEffect(() => {
         localStorage.setItem('CHART_WINDOW_PERIOD', WINDOW_SIZE.toString())
-    }, []);
+    }, [WINDOW_SIZE]);
 
     useEffect(() => {
         const newEndDate = history[0].voltage[history[0].voltage.length - 1].x;
@@ -258,7 +258,7 @@ const MyComponent: React.FC<Props> = () => {
          * Update the displayed plot dates to be relative to the latest measured date
          */
         setPlotOptions(initialOptions(newEndDate.getTime()));
-    }, [history])
+    }, [WINDOW_SIZE, history, scrolled])
 
 
     const toggleLegendElement = (phaseIndex: 1 | 2 | 3, category: "Voltage" | "Current") => {

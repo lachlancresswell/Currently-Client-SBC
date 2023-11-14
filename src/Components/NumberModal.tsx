@@ -6,7 +6,7 @@ import { ArrowUp, ArrowDown } from "./CommonUI";
 
 export const NumberModal = ({ setting, onClose, onSubmit, updated }: { setting: ConfigVariable, onClose: () => void, onSubmit: (setting: ConfigVariable) => void, updated?: boolean }) => {
     const [value, setValue] = useState<number>(parseInt(setting.value || '0'));
-    const [startValue, _setStartValue] = useState<number>(value);
+    const [startValue] = useState<number>(value);
 
     const resetValue = () => {
         setValue(startValue);

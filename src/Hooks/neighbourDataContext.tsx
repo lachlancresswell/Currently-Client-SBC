@@ -230,12 +230,6 @@ export const pollRange = async (db: QueryApi, start: string, end: string = 'now(
         debugger
     }
 
-    const annotationQuery = `
-    from(bucket: "mybucket")
-    |> range(start: ${start}, stop: ${end})
-    |> filter(fn: (r) => r["_measurement"] == "annotation-orange" or r["_measurement"] == "annotation-yellow" or r["_measurement"] == "annotation-purple" or r["_measurement"] == "annotation-green")`;
-
-
     let phases: Phase[] = [{
         voltage: [],
         amperage: [],

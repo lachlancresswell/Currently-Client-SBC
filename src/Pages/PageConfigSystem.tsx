@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const PLUGIN_NAME = 'SystemPlugin';
 
-export const SystemSettings = ({ }: {}) => {
+export const SystemSettings = () => {
     const { getPluginConfig, handleInputChange } = useConfigContext();
 
     const [pluginConfig, setPluginConfig] = useState<SystemOptions | undefined>(getPluginConfig<SystemOptions>(PLUGIN_NAME));

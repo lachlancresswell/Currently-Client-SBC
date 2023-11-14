@@ -5,11 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Warning } from '../Components/Warnings';
 import '../Styles/PageChannel.css'
 
-interface PageChannelProps {
-}
-
-
-export const PageChannel = ({ }: PageChannelProps) => {
+export const PageChannel = () => {
     const { selectedNeighbour } = useNeighbourContext();
     const { neighbourData } = useNeighbourDataContext();
 

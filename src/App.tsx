@@ -36,6 +36,7 @@ import { SystemSettings } from './Pages/PageConfigSystem';
 import { LocaleOptions } from '../Types';
 import { ConfigContextProvider, useConfigContext } from './Hooks/useConfig';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const NeighbourSelector = () => {
   const { neighbours, selectedNeighbour, setSelectedNeighbour } = useNeighbourContext();
 
@@ -164,6 +165,7 @@ const router = createBrowserRouter([{
 
 const AppWrapper = () => {
   const { selectedNeighbour } = useNeighbourContext();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_selectedNeighbourId, setSelectedNeighbourId] = useState<string | null>(null);
 
   useEffect(() => {

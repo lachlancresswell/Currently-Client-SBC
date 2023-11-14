@@ -48,7 +48,7 @@ const ConfigContext = createContext<ConfigContextType>({
         pluginState: [T | undefined, React.Dispatch<React.SetStateAction<T | undefined>>],
         startPluginState: [T | undefined, React.Dispatch<React.SetStateAction<T | undefined>>]
     ) => { },
-    getPluginConfig: <T extends ConfigArray>(pluginName: string) => undefined
+    getPluginConfig: (pluginName: string) => undefined
 });
 
 
