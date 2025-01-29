@@ -4,7 +4,10 @@
     font-size: 1.6em;
     color: black;
     font-weight: bold;
-    height: 10%;
+    height: 12%;
+
+    position: absolute;
+    top: 86vh;
     width: 133vh;
 }
 
