@@ -199,7 +199,8 @@ export const ConfigContextProvider: React.FC<props> = ({ children }) => {
             const newRemotePluginConfig = await pushPluginConfigToRemote<ConfigArray>(pluginName, { ...pluginConfig })
 
             if (!newRemotePluginConfig) {
-                throw (new Error(`Error updating config for plugin ${pluginName}`));
+                // TODO: Update has failed, reset to previous state
+                return;
             };
 
             const newState = {
